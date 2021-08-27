@@ -30,6 +30,7 @@ Junto com as API's:
 
 ## Overview de Funções
 
+- Função de insert, irá ler o que foi inscrito nos inputs e enviar para o banco de dados.
 ```JavaScript
 //post requet, vai inserrir os dados no database
 app.post('/create', (req, res) => { // rota ; font end -> back end
@@ -50,8 +51,7 @@ app.post('/create', (req, res) => { // rota ; font end -> back end
 );
 });
 ```
-- Função de insert, irá ler o que foi inscrito nos inputs e enviar para o banco de dados.
- 
+- Irá exibir na tela o que o produto que foi cadastrado.
 ```JavaScript
 app.get('/estoque', (req, res) => {
     database.query('SELECT * FROM produtos', (err, result) =>{
@@ -63,7 +63,8 @@ app.get('/estoque', (req, res) => {
     });
 });
 ```
-- Irá exibir na tela o que o produto que foi cadastrado.
+- Função responsável por realizar o update no banco de dados <br />
+ **NOT WORKING**
 
 ```JavaScript
 app.put('/update', (req, res) => {
@@ -78,9 +79,7 @@ app.put('/update', (req, res) => {
     });
 });
 ```
-- Função responsável por realizar o update no banco de dados
- **NOT WORKING**
- 
+- Responsável por excluir o produto e sua informações.
 ```JavaScript
 app.delete('/delete/:id', (req, res) => {  //ID será acessível
     const id = req.params.id;
@@ -93,9 +92,10 @@ app.delete('/delete/:id', (req, res) => {  //ID será acessível
     }); 
 });
 ```
-- Responsável por excluir o produto e sua informações.
+
 
 ## Screenshots
+![](https://drive.google.com/file/d/1X4ThJXQQTDwwuE3i31oP7i0S_3nSL5Il/view?usp=sharing)
 
 ## Author
 
