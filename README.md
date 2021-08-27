@@ -94,12 +94,12 @@ app.delete('/delete/:id', (req, res) => {  //ID será acessível
 ```
 
 
-## Screenshots
-![](https://drive.google.com/file/d/1X4ThJXQQTDwwuE3i31oP7i0S_3nSL5Il/view?usp=sharing)
+## Screenshot
+![](https://github.com/atiladefreitas/JS-CRUD/blob/main/proj2.png)
 
 ## Author
 
-### Átila de Freitas
+**Átila de Freitas**
 <p align="center">
   <a href="https://instagram.com/atiladefreitas.io">
         <img  src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white">
