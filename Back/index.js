@@ -45,7 +45,7 @@ app.get('/estoque', (req, res) => {
 app.put('/update', (req, res) => {
     const id = req.body.id;
     const price = req.body.price;
-    database.query("UPDATE SET produtos price = ? WHERE id = ?", [price, id], (err, result) => {
+    database.query("UPDATE produtos SET price = ? WHERE id = ?", [price, id], (err, result) => {
         if (err) {
             console.log(err);
         } else {
