@@ -12,12 +12,6 @@ function App() {
 
   const [estoqueList, setEstoqueList] = useState([]); // armazena todas as infos e a lista
 
-  /*
-  const display = () => {
-    console.log(name + num + desc + price);
-  };
-  */
-
   const addProduto = () => {
     Axios.post('http://localhost:3001/create',{
     name: name, 
