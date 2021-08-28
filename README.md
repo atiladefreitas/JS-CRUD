@@ -50,7 +50,7 @@ on _backend_ folder, run:
 node index.js
 ```
 
-## Overview de Funções
+## Function Overview
 
 - Insert function, will receive the data from fronend end send it to the backend.
 ```JavaScript
