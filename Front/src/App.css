@@ -10,6 +10,7 @@
   justify-content: center;
   font-family: 'Montserrat', sans-serif;
   margin-top: 30px;
+  
 }
 
 .title {
@@ -28,6 +29,7 @@
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
+  
 }
 
 .st-block {
@@ -61,6 +63,7 @@
 .btn {
   display: flex;
   flex-direction: column;
+  background-color: rgb(255, 255, 255);
 }
 
 
@@ -92,8 +95,18 @@ button:hover {
   cursor: pointer;
 }
 
+.update-input {
+  width: 100px;
+  height: 25px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  box-shadow: 5px 5px 10px rgba(197, 197, 197, 0.671);
+  border: 1px solid #ccc;
+  font-family: 'Montserrat', sans-serif;
+}
+
 .btn-main {
-  background-color: rgb(96, 184, 96);
+  background-color: rgb(47, 172, 47);
 }
 
 .btn-edit {
@@ -131,10 +144,10 @@ button:hover {
   font-family: 'Montserrat', sans-serif;
   font-size: 12px;
   border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.589);
+  background-color: rgb(255, 255, 255);
 }
 
 .estoq h3 {
   margin: 20px;
-  background-color: rgba(255, 255, 255, 0.589);
+  background-color: rgb(255, 255, 255);
 }
