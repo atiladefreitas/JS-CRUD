@@ -8,6 +8,8 @@ function App() {
   const [desc, setDesc] = useState("");
   const [price, setPrice] = useState(0);
 
+  const [newPrice, setNewPrice] = useState(0);
+
   const [estoqueList, setEstoqueList] = useState([]); // armazena todas as infos e a lista
 
   /*
@@ -42,6 +44,12 @@ function App() {
   });
 };
 
+  const updateValorProduto = (id) => {
+    Axios.put("http://localhost:3001/update", {price: newPrice, id: id}).then((response) => {
+      alert("update feito!");
+    });
+  };
+
   const deleteEstoque = (id) => {
     Axios.delete(`http://localhost:3001/delete/${id}`).then((response) => {
     setEstoqueList(estoqueList.filter((val) => {
@@ -62,8 +70,8 @@ function App() {
           <label>Nome do Produto: </label>
           <input type="text" onChange={(event) => {setName(event.target.value)}}/> 
           <br />
-          <label>Número (Tamanho): </label>
-          <input type="number" onChange={(event) => {setNum(event.target.value)}}/>
+          <label>Número / Tamanho: </label>
+          <input type="text" onChange={(event) => {setNum(event.target.value)}}/>
         </div>
         <br />
         <div className="nd-block">
@@ -93,13 +101,15 @@ function App() {
       {estoqueList.map((val, key) => { // mapeia todos os elementos de estoqueList
         return (<div className="estoq">
           <h3>Produto: {val.name}</h3>
-          <h3>Tamanho: {val.num}</h3>
+          <h3>Número / Tamanho: {val.num}</h3>
           <h3>Descrição: {val.desc}</h3>
           <h3>Valor: R$ {val.price}</h3>
           <div className="btn"> 
-            <button className="btn-edit">Edit</button>
-            <button className="btn-delete" onClick={() => {deleteEstoque(val.id);
-            }}>Delete</button> 
+          <div className="update-input-area">
+            <input type="text" placeholder="R$" className="update-input" onChange={(event) => {setNewPrice(event.target.value);}}/>
+            </div>
+            <button className="btn-edit" onClick={()=>{updateValorProduto(val.id); }}>Edit</button>
+            <button className="btn-delete" onClick={() => {deleteEstoque(val.id); }}>Delete</button> 
             {/* passo o valor da ID pelo parâmetro */}
           </div>
         </div>
