@@ -28,6 +28,28 @@ Along with the API's and Packages:
   - [CORS](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/CORS);
   - [AXIOS](https://github.com/axios/axios#readme).
 
+## Steps
+
+After download the code, run on terminal (in both folders):
+
+```
+npm install
+```
+Open _backend_ folder and run:
+```
+npm install mysql express cors
+```
+
+#### To start the aplication
+on _frontend_ folder, run:
+```
+npm start
+```
+on _backend_ folder, run:
+```
+node index.js
+```
+
 ## Overview de Funções
 
 - Insert function, will receive the data from fronend end send it to the backend.
