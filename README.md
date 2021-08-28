@@ -35,10 +35,13 @@ Along with the API's and Packages:
 //post requet, vai inserrir os dados no database
 app.post('/create', (req, res) => { // rota ; font end -> back end
     //variáveis do front end
+    /*
     const name = req.body.name;
     const num = req.body.num;
     const desc = req.body.desc;
     const price = req.body.price;
+    */
+    const { name, num, desc, price } = req.body;
     
     database.query('INSERT INTO produtos (`name`, `num`, `desc`, `price`) VALUES (?,?,?,?)', //insert
     [name, num, desc, price], (err, result) => { //verify
