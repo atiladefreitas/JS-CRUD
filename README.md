@@ -1,4 +1,4 @@
-# Gerenciador de Produto / Estoque
+# Product & Inventury manager
 <p align="center">
     <img height="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg">
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -11,26 +11,26 @@
 
 ## Description
 
-Gerenciador de estoque com as funções de:
-  - Adicionar uma peça de roupa (nome, tamanho, descição e valor)
-  - Visualizar o estoque;
-  - Editar as informações do produto;
-  - Excluir produto do banco de dados.
+Inventory manager with the following functions:
+  - Add a piece of clothing (name, size, description and price)
+  - View inventory;
+  - Update product price;
+  - Delete product from database.
 
-Neste projeto foi utilizado:
+In this project was used the following tools:
   - JavaScript
   - React
   - NodeJs
   - mySQL
 
-Junto com as API's:
+Along with the API's and Packages:
   - [Express](https://expressjs.com/pt-br/);
   - [CORS](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/CORS);
   - [AXIOS](https://github.com/axios/axios#readme).
 
 ## Overview de Funções
 
-- Função de insert, irá ler o que foi inscrito nos inputs e enviar para o banco de dados.
+- Insert function, will receive the data from fronend end send it to the backend.
 ```JavaScript
 //post requet, vai inserrir os dados no database
 app.post('/create', (req, res) => { // rota ; font end -> back end
@@ -51,7 +51,7 @@ app.post('/create', (req, res) => { // rota ; font end -> back end
 );
 });
 ```
-- Irá exibir na tela o que o produto que foi cadastrado.
+- Display function, will show on the screen the registeres product.
 ```JavaScript
 app.get('/estoque', (req, res) => {
     database.query('SELECT * FROM produtos', (err, result) =>{
@@ -63,8 +63,7 @@ app.get('/estoque', (req, res) => {
     });
 });
 ```
-- Função responsável por realizar o update no banco de dados <br />
- **NOT WORKING**
+- Update function, will update the price on database.
 
 ```JavaScript
 app.put('/update', (req, res) => {
@@ -79,7 +78,7 @@ app.put('/update', (req, res) => {
     });
 });
 ```
-- Responsável por excluir o produto e sua informações.
+- Delete function.
 ```JavaScript
 app.delete('/delete/:id', (req, res) => {  //ID será acessível
     const id = req.params.id;
@@ -92,10 +91,13 @@ app.delete('/delete/:id', (req, res) => {  //ID será acessível
     }); 
 });
 ```
+> **NOTICE**
+> after add a product, for a better usage of update & delete function, refresh page are require (F5).
+
 
 
 ## Screenshot
-![](https://github.com/atiladefreitas/JS-CRUD/blob/main/proj2.png)
+![](https://github.com/atiladefreitas/JS-CRUD/blob/main/crud_proj.png)
 
 ## Author
 
